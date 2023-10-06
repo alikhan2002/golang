@@ -15,7 +15,7 @@ type Stroller struct {
 	Version   int32     `json:"version"`
 }
 
-func ValidateMovie(v *validator.Validator, stroller *Stroller) {
+func ValidateStroller(v *validator.Validator, stroller *Stroller) {
 	v.Check(stroller.Title != "", "title", "must be provided")
 	v.Check(len(stroller.Title) <= 500, "title", "must not be more than 500 bytes long")
 	v.Check(stroller.Brand != "", "brand", "must be provided")

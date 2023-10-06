@@ -2,13 +2,11 @@ package main
 
 import (
 	"assignment2.alikhan.net/internal/data"
+	"assignment2.alikhan.net/internal/validator"
 	"fmt"
 	"net/http"
 	"time"
 )
-
-// Add a createMovieHandler for the "POST /v1/movies" endpoint. For now we simply
-// return a plain-text placeholder response.
 
 func (app *application) createStrollerHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
@@ -29,24 +27,17 @@ func (app *application) createStrollerHandler(w http.ResponseWriter, r *http.Req
 		Color: input.Color,
 		Ages:  input.Ages,
 	}
-	// Initialize a new Validator.
-	//v := validator.New()
-	// Call the ValidateMovie() function and return a response containing the errors if
-	// any of the checks fail.
-	//if data.ValidateStroller(v, stroller); !v.Valid() {
-	//	app.failedValidationResponse(w, r, v.Errors)
-	//	return
-	//}
+	v := validator.New()
+	if data.ValidateStroller(v, stroller); !v.Valid() {
+		app.failedValidationResponse(w, r, v.Errors)
+		return
+	}
 	fmt.Fprintf(w, "%+v\n", input)
 }
 
-// Add a showMovieHandler for the "GET /v1/movies/:id" endpoint. For now, we retrieve
-// the interpolated "id" parameter from the current URL and include it in a placeholder
-// response.
 func (app *application) showStrollerHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
 	if err != nil {
-		// Use the new notFoundResponse() helper.
 		app.notFoundResponse(w, r)
 		return
 	}
@@ -61,7 +52,6 @@ func (app *application) showStrollerHandler(w http.ResponseWriter, r *http.Reque
 	}
 	err = app.writeJSON(w, http.StatusOK, envelope{"stroller": stroller}, nil)
 	if err != nil {
-		// Use the new serverErrorResponse() helper.
 		app.serverErrorResponse(w, r, err)
 	}
 }
