@@ -22,5 +22,6 @@ func ValidateStroller(v *validator.Validator, stroller *Stroller) {
 	v.Check(len(stroller.Brand) <= 500, "brand", "must not be more than 500 bytes long")
 	v.Check(stroller.Color != "", "color", "must be provided")
 	v.Check(len(stroller.Brand) <= 100, "color", "must not be more than 100 bytes long")
-
+	v.Check(stroller.Ages != "", "ages", "must be provided")
+	v.Check(len(stroller.Ages) <= 10, "ages", "must not be more than 10 bytes long")
 }

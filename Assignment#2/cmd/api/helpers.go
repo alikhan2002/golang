@@ -22,7 +22,6 @@ func (app *application) readIDParam(r *http.Request) (int64, error) {
 
 type envelope map[string]interface{}
 
-// Change the data parameter to have the type envelope instead of interface{}.
 func (app *application) writeJSON(w http.ResponseWriter, status int, data envelope, headers http.Header) error {
 	js, err := json.MarshalIndent(data, "", "\t")
 	if err != nil {
@@ -43,7 +42,6 @@ func (app *application) readJSON(w http.ResponseWriter, r *http.Request, dst int
 	r.Body = http.MaxBytesReader(w, r.Body, int64(maxBytes))
 	dec := json.NewDecoder(r.Body)
 	dec.DisallowUnknownFields()
-	// Decode the request body to the destination.
 	err := dec.Decode(dst)
 	if err != nil {
 		var syntaxError *json.SyntaxError
