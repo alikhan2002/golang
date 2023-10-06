@@ -14,11 +14,8 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.mod" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/runtime.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
