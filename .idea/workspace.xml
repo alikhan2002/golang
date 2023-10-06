@@ -4,51 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1068bc3b-6598-4e61-bf8f-f3357e9e7a56" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/Go.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/ceo/ceo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/dataanalyst/dataanalyst.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/employee/employee.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/manager/manager.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/softwareengineer/softwareengineer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assign #1/vp/vp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/errors.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/healthcheck.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/helpers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/routes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/strollers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/movies.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/runtime.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/snippetbox/cmd/web/handlers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/snippetbox/cmd/web/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/snippetbox/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/snippetbox/ui/html/base.layout.tmpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/snippetbox/ui/html/footer.partial.tmpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/snippetbox/ui/html/home.page.tmpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/errors.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/healthcheck.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/helpers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/movies.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/routes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/internal/data/movies.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/internal/data/runtime.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch. 1-4/internal/validator/validator.go" afterDir="false" />
-    </list>
+    <list default="true" id="1068bc3b-6598-4e61-bf8f-f3357e9e7a56" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
