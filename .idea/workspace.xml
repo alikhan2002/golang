@@ -4,19 +4,50 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1068bc3b-6598-4e61-bf8f-f3357e9e7a56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Go.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Go.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ceo/ceo.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataanalyst/dataanalyst.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/employee/employee.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/manager.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/softwareengineer/softwareengineer.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vp/vp.go" beforeDir="false" />
+    <list default="true" id="1068bc3b-6598-4e61-bf8f-f3357e9e7a56" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/Go.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/ceo/ceo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/dataanalyst/dataanalyst.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/employee/employee.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/manager/manager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/softwareengineer/softwareengineer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assign #1/vp/vp.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/healthcheck.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/helpers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/routes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/strollers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/movies.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/runtime.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/snippetbox/cmd/web/handlers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/snippetbox/cmd/web/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/snippetbox/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/snippetbox/ui/html/base.layout.tmpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/snippetbox/ui/html/footer.partial.tmpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/snippetbox/ui/html/home.page.tmpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/healthcheck.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/helpers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/movies.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/cmd/api/routes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/internal/data/movies.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/internal/data/runtime.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch. 1-4/internal/validator/validator.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +123,10 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
