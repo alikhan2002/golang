@@ -1,7 +1,8 @@
 package main
 
 import (
-	data "assignment2.alikhan.net/internal"
+	"assignment2.alikhan.net/internal/data"
+	"assignment2.alikhan.net/internal/validator"
 	"fmt"
 	"net/http"
 	"time"
@@ -19,9 +20,20 @@ func (app *application) createStrollerHandler(w http.ResponseWriter, r *http.Req
 		app.badRequestResponse(w, r, err)
 		return
 	}
+	stroller := &data.Stroller{
+		Title: input.Title,
+		Brand: input.Brand,
+		Color: input.Color,
+		Ages:  input.Ages,
+	}
+	v := validator.New()
+	if data.ValidateStroller(v, stroller); !v.Valid() {
+		app.failedValidationResponse(w, r, v.Errors)
+		return
+	}
 	fmt.Fprintf(w, "%+v\n", input)
-
 }
+
 func (app *application) showStrollerHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
 	if err != nil {

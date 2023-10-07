@@ -13,7 +13,9 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/cmd/api/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.mod" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/strollers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +63,12 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aliha\OneDrive\Рабочий стол\Fourth\Go\Assignment#2\internal\data" />
+      <recent name="C:\Users\aliha\OneDrive\Рабочий стол\Fourth\Go\Assignment#2\internal\validator" />
+    </key>
+  </component>
   <component name="RunManager" selected="Go Build.go build healthcheck.go">
     <configuration name="go build Go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
