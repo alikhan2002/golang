@@ -1,8 +1,10 @@
 package main
 
 import (
+	data "assignment2.alikhan.net/internal"
 	"fmt"
 	"net/http"
+	"time"
 )
 
 func (app *application) createStrollerHandler(w http.ResponseWriter, r *http.Request) {
@@ -14,5 +16,18 @@ func (app *application) showStrollerHandler(w http.ResponseWriter, r *http.Reque
 		http.NotFound(w, r)
 		return
 	}
-	fmt.Fprintf(w, "show the details of movie %d\n", id)
+	stroller := data.Stroller{
+		ID:        id,
+		CreatedAt: time.Now(),
+		Title:     "CoolShare Baby Stroller for Toddler",
+		Brand:     "CoolShare",
+		Color:     "Gray",
+		Ages:      "1-3",
+		Version:   1,
+	}
+	err = app.writeJSON(w, http.StatusOK, stroller, nil)
+	if err != nil {
+		app.logger.Println(err)
+		http.Error(w, "The server encountered a problem and could not process your request", http.StatusInternalServerError)
+	}
 }
