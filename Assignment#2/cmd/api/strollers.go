@@ -8,7 +8,19 @@ import (
 )
 
 func (app *application) createStrollerHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "create a new movie")
+	var input struct {
+		Title string `json:"title"`
+		Brand string `json:"brand"`
+		Color string `json:"color"`
+		Ages  string `json:"ages"`
+	}
+	err := app.readJSON(w, r, &input)
+	if err != nil {
+		app.badRequestResponse(w, r, err)
+		return
+	}
+	fmt.Fprintf(w, "%+v\n", input)
+
 }
 func (app *application) showStrollerHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
