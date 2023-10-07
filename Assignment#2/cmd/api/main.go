@@ -15,6 +15,7 @@ type config struct {
 	port int
 	env  string
 }
+
 type application struct {
 	config config
 	logger *log.Logger
@@ -30,6 +31,7 @@ func main() {
 		config: cfg,
 		logger: logger,
 	}
+	// Use the httprouter instance returned by app.routes() as the server handler.
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%d", cfg.port),
 		Handler:      app.routes(),
