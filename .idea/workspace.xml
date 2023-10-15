@@ -15,8 +15,51 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/.idea/Go.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Alex Edwards - Let's Go-Alex Edwards (2022).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Alex_Edwards_Let's_Go_Further_Advanced_patterns_for_building_APIs.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/.idea/Go.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/ceo/ceo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/dataanalyst/dataanalyst.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/employee/employee.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/manager/manager.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/softwareengineer/softwareengineer.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assign #1/vp/vp.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/cmd/api/errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/cmd/api/healthcheck.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/cmd/api/helpers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/cmd/api/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/cmd/api/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/cmd/api/strollers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/internal/data/strollers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#2/internal/validator/validator.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/cmd/api/errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/cmd/api/healthcheck.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/cmd/api/helpers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/cmd/api/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/cmd/api/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/cmd/api/strollers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/internal/data/strollers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Assignment#3/internal/validator/validator.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Project/snippetbox/cmd/web/handlers.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Project/snippetbox/cmd/web/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Project/snippetbox/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Project/snippetbox/ui/html/base.layout.tmpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Project/snippetbox/ui/html/footer.partial.tmpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/Project/snippetbox/ui/html/home.page.tmpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#3/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#3/cmd/api/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +76,9 @@
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../../Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assignment#3" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
