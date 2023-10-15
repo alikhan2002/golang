@@ -15,6 +15,7 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +32,7 @@
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../../Program Files/Go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Assignment#3" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
