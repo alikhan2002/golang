@@ -5,6 +5,7 @@ import (
 	"context"
 	"database/sql"
 	"errors"
+	"fmt"
 	"time"
 )
 
@@ -54,8 +55,6 @@ func (m StrollerModel) Insert(stroller *Stroller) error {
 	return m.DB.QueryRowContext(ctx, query, args...).Scan(&stroller.ID, &stroller.CreatedAt, &stroller.Version)
 }
 
-}
-
 func (m StrollerModel) Get(id int64) (*Stroller, error) {
 	if id < 1 {
 		return nil, ErrRecordNotFound
@@ -95,6 +94,67 @@ func (m StrollerModel) Get(id int64) (*Stroller, error) {
 	return &stroller, nil
 }
 
+func (m StrollerModel) GetAll(title string, brand string, filters Filters) ([]*Stroller, Metadata, error) {
+	// Construct the SQL query to retrieve all movie records.
+	query := fmt.Sprintf(`
+	SELECT count(*) OVER(), id, created_at, title, brand, price, color, ages, version
+	FROM strollers
+	WHERE (to_tsvector('simple', title) @@ plainto_tsquery('simple', $1) OR $1 = '')
+	ORDER BY %s %s, id ASC
+	LIMIT $3 OFFSET $4`, filters.sortColumn(), filters.sortDirection())
+	// Add an ORDER BY clause and interpolate the sort column and direction. Importantly
+	// notice that we also includ	e a secondary sort on the movie ID to ensure a
+	// consistent ordering.
+	// Create a context with a 3-second timeout.
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+	// Use QueryContext() to execute the query. This returns a sql.Rows resultset
+	// containing the result.
+	args := []interface{}{title, brand, filters.limit(), filters.offset()}
+	// And then pass the args slice to QueryContext() as a variadic parameter.
+	rows, err := m.DB.QueryContext(ctx, query, args...)
+	if err != nil {
+		return nil, Metadata{}, err // Update this to return an empty Metadata struct.
+	}
+	// Importantly, defer a call to rows.Close() to ensure that the resultset is closed
+	// before GetAll() returns.
+	defer rows.Close()
+	// Initialize an empty slice to hold the movie data.
+	totalRecords := 0
+	strollers := []*Stroller{}
+	// Use rows.Next to iterate through the rows in the resultset.
+	for rows.Next() {
+		// Initialize an empty Movie struct to hold the data for an individual movie.
+		var stroller Stroller
+		// Scan the values from the row into the Movie struct. Again, note that we're
+		// using the pq.Array() adapter on the genres field here.
+		err := rows.Scan(
+			&totalRecords, // Scan the count from the window function into totalRecords.
+			&stroller.ID,
+			&stroller.CreatedAt,
+			&stroller.Title,
+			&stroller.Brand,
+			&stroller.Price,
+			&stroller.Color,
+			&stroller.Ages,
+			&stroller.Version,
+		)
+		if err = rows.Err(); err != nil {
+			return nil, Metadata{}, err // Update this to return an empty Metadata struct.
+		}
+		// Add the Movie struct to the slice.
+		strollers = append(strollers, &stroller)
+	}
+	if err = rows.Err(); err != nil {
+		return nil, Metadata{}, err // Update this to return an empty Metadata struct.
+	}
+	// Generate a Metadata struct, passing in the total record count and pagination
+	// parameters from the client.
+	metadata := calculateMetadata(totalRecords, filters.Page, filters.PageSize)
+	// Include the metadata struct when returning.
+	return strollers, metadata, nil
+}
+
 func (m StrollerModel) Update(stroller *Stroller) error {
 	// Declare the SQL query for updating the record and returning the new version
 	// number.
@@ -114,7 +174,7 @@ func (m StrollerModel) Update(stroller *Stroller) error {
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
-	err := m.DB.QueryRowContext(ctx,query, args...).Scan(&stroller.Version)
+	err := m.DB.QueryRowContext(ctx, query, args...).Scan(&stroller.Version)
 	if err != nil {
 		switch {
 		case errors.Is(err, sql.ErrNoRows):
@@ -137,7 +197,7 @@ func (m StrollerModel) Delete(id int64) error {
 	WHERE id = $1`
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
-	result, err := m.DB.ExecContext(ctx,query, id)
+	result, err := m.DB.ExecContext(ctx, query, id)
 	if err != nil {
 		return err
 	}

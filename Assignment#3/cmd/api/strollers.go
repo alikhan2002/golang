@@ -159,3 +159,43 @@ func (app *application) deleteStrollerHandler(w http.ResponseWriter, r *http.Req
 		app.serverErrorResponse(w, r, err)
 	}
 }
+
+func (app *application) listStrollerHandler(w http.ResponseWriter, r *http.Request) {
+	// To keep things consistent with our other handlers, we'll define an input struct
+	// to hold the expected values from the request query string.
+	var input struct {
+		Title string
+		Brand string
+		Price int
+		Color string
+		Ages  string
+		data.Filters
+	}
+	// Initialize a new Validator instance.
+	v := validator.New()
+	qs := r.URL.Query()
+	input.Title = app.readString(qs, "title", "")
+	input.Brand = app.readString(qs, "brand", "")
+	input.Filters.Page = app.readInt(qs, "page", 1, v)
+	input.Filters.PageSize = app.readInt(qs, "page_size", 20, v)
+	input.Filters.Sort = app.readString(qs, "sort", "id")
+	// Add the supported sort values for this endpoint to the sort safelist.
+	input.Filters.SortSafelist = []string{"id", "title", "price", "-id", "-title", "-year"}
+
+	// Execute the validation checks on the Filters struct and send a response
+	// containing the errors if necessary.
+	if data.ValidateFilters(v, input.Filters); !v.Valid() {
+		app.failedValidationResponse(w, r, v.Errors)
+		return
+	}
+	strollers, metadata, err := app.models.Strollers.GetAll(input.Title, input.Brand, input.Filters)
+	if err != nil {
+		app.serverErrorResponse(w, r, err)
+		return
+	}
+	// Send a JSON response containing the movie data.
+	err = app.writeJSON(w, http.StatusOK, envelope{"strollers": strollers, "metadata": metadata}, nil)
+	if err != nil {
+		app.serverErrorResponse(w, r, err)
+	}
+}
