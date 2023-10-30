@@ -79,6 +79,7 @@ func (app *application) updateStrollerHandler(w http.ResponseWriter, r *http.Req
 		app.notFoundResponse(w, r)
 		return
 	}
+	// Retrieve  movie record as normal.
 	stroller, err := app.models.Strollers.Get(id)
 	if err != nil {
 		switch {
@@ -89,26 +90,34 @@ func (app *application) updateStrollerHandler(w http.ResponseWriter, r *http.Req
 		}
 		return
 	}
-
 	// Declare an input struct to hold the expected data from the client.
 	var input struct {
-		Title string `json:"title"`
-		Price int32  `json:"price"`
-		Brand string `json:"brand"`
-		Color string `json:"color"`
-		Ages  string `json:"ages"`
+		Title *string `json:"title"`
+		Brand *string `json:"brand"`
+		Price *int32  `json:"price"`
+		Color *string `json:"color"`
+		Ages  *string `json:"ages"`
 	}
 	err = app.readJSON(w, r, &input)
 	if err != nil {
 		app.badRequestResponse(w, r, err)
 		return
 	}
-	stroller.Title = input.Title
-	stroller.Price = input.Price
-	stroller.Brand = input.Brand
-	stroller.Ages = input.Ages
-	stroller.Ages = input.Color
-
+	if input.Title != nil {
+		stroller.Title = *input.Title
+	}
+	if input.Brand != nil {
+		stroller.Brand = *input.Brand
+	}
+	if input.Price != nil {
+		stroller.Price = *input.Price
+	}
+	if input.Color != nil {
+		stroller.Color = *input.Color // Note that we don't need to dereference a slice.
+	}
+	if input.Ages != nil {
+		stroller.Ages = *input.Ages
+	}
 	v := validator.New()
 	if data.ValidateStroller(v, stroller); !v.Valid() {
 		app.failedValidationResponse(w, r, v.Errors)
@@ -116,10 +125,14 @@ func (app *application) updateStrollerHandler(w http.ResponseWriter, r *http.Req
 	}
 	err = app.models.Strollers.Update(stroller)
 	if err != nil {
-		app.serverErrorResponse(w, r, err)
+		switch {
+		case errors.Is(err, data.ErrEditConflict):
+			app.editConflictResponse(w, r)
+		default:
+			app.serverErrorResponse(w, r, err)
+		}
 		return
 	}
-	// Write the updated movie record in a JSON response.
 	err = app.writeJSON(w, http.StatusOK, envelope{"stroller": stroller}, nil)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)

@@ -2,6 +2,7 @@ package data
 
 import (
 	"assignment2.alikhan.net/internal/validator"
+	"context"
 	"database/sql"
 	"errors"
 	"time"
@@ -47,30 +48,33 @@ func (m StrollerModel) Insert(stroller *Stroller) error {
 	// the movie struct. Declaring this slice immediately next to our SQL query helps to
 	// make it nice and clear *what values are being used where* in the query.
 	args := []interface{}{stroller.Title, stroller.Brand, stroller.Price, stroller.Color, stroller.Ages}
-	return m.DB.QueryRow(query, args...).Scan(&stroller.ID, &stroller.CreatedAt, &stroller.Version)
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+	// Use QueryRowContext() and pass the context as the first argument.
+	return m.DB.QueryRowContext(ctx, query, args...).Scan(&stroller.ID, &stroller.CreatedAt, &stroller.Version)
+}
 
 }
 
 func (m StrollerModel) Get(id int64) (*Stroller, error) {
-	// The PostgreSQL bigserial type that we're using for the movie ID starts
-	// auto-incrementing at 1 by default, so we know that no movies will have ID values
-	// less than that. To avoid making an unnecessary database call, we take a shortcut
-	// and return an ErrRecordNotFound error straight away.
 	if id < 1 {
 		return nil, ErrRecordNotFound
 	}
 	// Define the SQL query for retrieving the movie data.
 	query := `
-	SELECT id, created_at, title, brand, price, color, ages, version
+	SELECT pg_sleep(10), id, created_at, title, brand, price, color, ages, version
 	FROM strollers
 	WHERE id = $1`
 	// Declare a Movie struct to hold the data returned by the query.
 	var stroller Stroller
-	// Execute the query using the QueryRow() method, passing in the provided id value
-	// as a placeholder parameter, and scan the response data into the fields of the
-	// Movie struct. Importantly, notice that we need to convert the scan target for the
-	// genres column using the pq.Array() adapter function again.
-	err := m.DB.QueryRow(query, id).Scan(
+	// Use the context.WithTimeout() function to create a context.Context which carries a
+	// 3-second timeout deadline. Note that we're using the empty context.Background()
+	// as the 'parent' context.
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	// Importantly, use defer to make sure that we cancel the context before the Get()
+	// method returns.
+	defer cancel()
+	err := m.DB.QueryRowContext(ctx, query, id).Scan(
 		&stroller.ID,
 		&stroller.CreatedAt,
 		&stroller.Title,
@@ -80,9 +84,6 @@ func (m StrollerModel) Get(id int64) (*Stroller, error) {
 		&stroller.Ages,
 		&stroller.Version,
 	)
-	// Handle any errors. If there was no matching movie found, Scan() will return
-	// a sql.ErrNoRows error. We check for this and return our custom ErrRecordNotFound
-	// error instead.
 	if err != nil {
 		switch {
 		case errors.Is(err, sql.ErrNoRows):
@@ -100,7 +101,7 @@ func (m StrollerModel) Update(stroller *Stroller) error {
 	query := `
 		UPDATE strollers
 		SET title = $1, brand = $2, price = $3, color = $4, ages = $5, version = version + 1
-		WHERE id = $3
+		WHERE id = $6 and version = $7
 		RETURNING version`
 	// Create an args slice containing the values for the placeholder parameters.
 	args := []interface{}{
@@ -111,7 +112,19 @@ func (m StrollerModel) Update(stroller *Stroller) error {
 		stroller.Color,
 		stroller.ID,
 	}
-	return m.DB.QueryRow(query, args...).Scan(&stroller.Version)
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+	err := m.DB.QueryRowContext(ctx,query, args...).Scan(&stroller.Version)
+	if err != nil {
+		switch {
+		case errors.Is(err, sql.ErrNoRows):
+			return ErrEditConflict
+		default:
+			return err
+		}
+	}
+
+	return nil
 }
 
 func (m StrollerModel) Delete(id int64) error {
@@ -122,7 +135,9 @@ func (m StrollerModel) Delete(id int64) error {
 	query := `
 	DELETE FROM strollers
 	WHERE id = $1`
-	result, err := m.DB.Exec(query, id)
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+	result, err := m.DB.ExecContext(ctx,query, id)
 	if err != nil {
 		return err
 	}

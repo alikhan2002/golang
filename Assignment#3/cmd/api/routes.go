@@ -12,7 +12,7 @@ func (app *application) routes() *httprouter.Router {
 	router.HandlerFunc(http.MethodGet, "/v1/healthcheck", app.healthcheckHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/strollers", app.createStrollerHandler)
 	router.HandlerFunc(http.MethodGet, "/v1/strollers/:id", app.showStrollerHandler)
-	router.HandlerFunc(http.MethodPut, "/v1/strollers/:id", app.updateStrollerHandler)
-	router.HandlerFunc(http.MethodDelete, "/v1/strollers/:id", app.deleteStrollerHandler)
+	router.HandlerFunc(http.MethodPatch, "/v1/strollers/:id", app.updateStrollerHandler)
+	router.HandlerFunc(http.MethodDelete, "/v1/stroller/:id", app.deleteStrollerHandler)
 	return router
 }
