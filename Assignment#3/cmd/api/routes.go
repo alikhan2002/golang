@@ -19,5 +19,5 @@ func (app *application) routes() http.Handler {
 	router.HandlerFunc(http.MethodPatch, "/v1/strollers/:id", app.updateStrollerHandler)
 	router.HandlerFunc(http.MethodDelete, "/v1/stroller/:id", app.deleteStrollerHandler)
 
-	return app.recoverPanic(router)
+	return app.recoverPanic(app.rateLimit(router))
 }
