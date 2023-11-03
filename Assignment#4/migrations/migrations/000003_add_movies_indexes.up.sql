@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS strollers_title_idx ON strollers USING GIN (to_tsvector('simple', title));
