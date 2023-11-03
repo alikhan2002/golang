@@ -15,10 +15,15 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/users.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#4/internal/data/users.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#4/internal/mailer/mailer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#4/internal/mailer/templates/user_welcome.tmpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/helpers.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/helpers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/users.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/internal/jsonlog/jsonlog.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/internal/jsonlog/jsonlog.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Midterm" beforeDir="false" afterPath="$PROJECT_DIR$/Midterm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Midterm/.idea/Go.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Midterm/.idea/vcs.xml" beforeDir="false" />
@@ -64,6 +69,8 @@
       <change beforePath="$PROJECT_DIR$/Midterm/Project/snippetbox/ui/html/footer.partial.tmpl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Midterm/Project/snippetbox/ui/html/home.page.tmpl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Midterm/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Midterm/cmd/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
