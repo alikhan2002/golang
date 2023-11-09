@@ -15,20 +15,11 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#4/internal/data/permissions.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment#4/cmd/examples/cors/simple/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/errors.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/errors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/middleware.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/servers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/strollers.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/strollers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/users.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/internal/data/filters.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/internal/data/filters.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/internal/data/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/internal/data/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/internal/data/strollers.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/internal/data/strollers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/internal/data/tokens.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/internal/data/tokens.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/internal/mailer/mailer.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/internal/mailer/mailer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_movies_indexes.down.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_strollers_indexes.down.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_movies_indexes.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_strollers_indexes.up.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000004_create_users_table.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000004_create_users_table.up.sql" afterDir="false" />
