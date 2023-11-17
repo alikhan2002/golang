@@ -15,11 +15,8 @@
       <change afterPath="$PROJECT_DIR$/Assignment#2/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/data/strollers.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assignment#2/internal/validator/validator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment#4/cmd/examples/cors/simple/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment#4/cmd/api/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/cmd/api/routes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_movies_indexes.down.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_strollers_indexes.down.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_movies_indexes.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000003_add_strollers_indexes.up.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000004_create_users_table.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment#4/migrations/migrations/000004_create_users_table.up.sql" afterDir="false" />
@@ -112,7 +109,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aliha&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aliha/OneDrive/Рабочий стол/Fourth/Docker/post&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
@@ -157,6 +154,10 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
